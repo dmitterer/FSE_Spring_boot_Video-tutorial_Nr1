@@ -14,8 +14,8 @@ public class UserController {
 
     @GetMapping("/users")
     public String showUserList(Model model){
-        List<User> ListUsers =service.ListAll();
-        model.addAttribute("listUsers",ListUsers);
+        List<User> listUsers =service.listAll();
+        model.addAttribute("listUsers", listUsers);
         return "users";
 
 
