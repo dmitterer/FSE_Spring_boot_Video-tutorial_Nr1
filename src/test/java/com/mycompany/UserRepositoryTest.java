@@ -55,4 +55,12 @@ public class UserRepositoryTest {
         Assertions.assertThat(updatedUser.getPassword()).isEqualTo("NewPW1235");
 
     }
+
+    @Test
+    public void testGet(){
+        Integer userId = 2;
+        Optional<User> optionalUser = repo.findById(userId);
+        Assertions.assertThat(optionalUser).isPresent();
+        System.out.println(optionalUser.get());
+    }
 }
